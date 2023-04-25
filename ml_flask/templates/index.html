@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>    
+    <title>Прогнозирование конечных свойств композиционных материалов</title>
+</head>
+<body>   
+    <form action="" method="post">
+    <style> 
+          
+    input {
+    height: 20px;
+    width: 100%;   
+    }
+
+    form {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    </style>       
+    <fieldset>
+        <legend> Введите параметры для модели </legend>
+    <p>
+	    <label for="par1">Плотность, кг/м3</label>
+	    <input type="text" name="par1" required>
+    </p><p>
+	    <label for="par2">Модуль упругости, ГПа</label>
+	    <input type="text" name="par2" required>
+    </p><p>
+	    <label for="par3">Количество отвердителя, м.%</label>
+	    <input type="text" name="par3" required>
+    </p><p>
+        <label for="par4">Содержание эпоксидных групп,%_2</label>
+	    <input type="text" name="par4" required>
+    </p><p>
+        <label for="par5">Температура вспышки, С_2</label>
+	    <input type="text" name="par5" required>
+    </p><p>
+        <label for="par6">Поверхностная плотность, г/м2</label>
+	    <input type="text" name="par6" required>
+    </p><p>
+        <label for="par7">Модуль упругости при растяжении, ГПа</label>
+	    <input type="text" name="par7" required>
+    </p><p>
+        <label for="par8">Прочность при растяжении, МПа</label>
+	    <input type="text" name="par8" required>
+    </p><p>
+        <label for="par9">Потребление смолы, г/м2</label>
+	    <input type="text" name="par9" required>
+    </p><p>
+        <label for="par10">Угол нашивки, град</label>
+	    <input type="number" name="par10" min='0' max='90' step='1' required>
+    </p><p>
+        <label for="par11">Шаг нашивки</label>
+	    <input type="text" name="par11" required>
+    </p><p>
+        <label for="par12">Плотность нашивки</label>
+	    <input type="text" name="par12" required>
+	</p>
+    <p>
+        <input type="submit" value="Рассчитать значение">       
+    </p> 
+    </fieldset>
+       
+    </form>
+    <p>
+    {% if message %}
+        <p><b style="font-size: 20px;">{{message}}</b></p>
+    {% endif %}
+        
+    </p>
+</body>
+</html>
